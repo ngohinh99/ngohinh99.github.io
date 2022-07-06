@@ -1,0 +1,23 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: powderblue;
+    font-size: 20px;
+  }
+  #id1{
+    background-color: white;
+    width: 70%;
+    margin: 30px auto;
+    padding: 30px 10px;
+  }
+  .class1{
+    overflow: hidden;
+  
+  }
+  .class2{
+    display: flex;
+    margin: 0px auto 200px auto;
+  }
+  
