@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: #757575;
+    font-weight: 400;
+}
+a{text-decoration: none;}
+a:hover{color: orangered;}
+li:hover{
+    background-color: #eff0f5;
+}
+ul{
+    
+
+}
+li{
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 100px;
+    padding-left: 8px;
+    list-style-type: none;
+}
+#container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+/* cấp 1 */
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    
+}
+/* cấp 2 */
+.menu__child{
+    position: absolute;
+    display: none;
+    width: 300px;
+    left: 300px;
+    top: 0;
+}
+
+.menu li:hover .menu__child{
+    display: block;   
+}
+/* cấp 3 */
+.menu__child__child{
+    position: absolute;
+    display: none;
+    width: 300px;
+    left: 300px;
+    top: 0;
+}
+.menu__child li:hover .menu__child__child{
+    display: block;
+}
