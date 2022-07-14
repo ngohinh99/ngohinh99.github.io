@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .reactangle{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* transition thay đổi từ từ màu xanh sang màu đỏ */
+            /* transition: all 2s linear   ; */
+            transition-property: width height background-color;
+            transition-duration: 2s;
+            transition-delay: 200ms;
+            transition-timing-function: linear;
+            }
+        .reactangle:hover{
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            /* transform: ; xoay, */
+            transform: rotate(180deg);
+
+        }
+        .reat{
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: yellow;
+            animation-name: change-many-color;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;/*lặp lại với số lần */
+        }
+        @keyframes change-color{
+            from{
+                background-color: yellow;
+
+            }
+            to{
+                background-color: rebeccapurple;
+
+            }
+        }
+        @keyframes change-many-color{
+            10%{background-color: green;}
+            20%{background-color:teal ;}
+            30%{background-color: blue;}
+            50%{background-color: red;}
+            100%{background-color: white;}
+        }
+    </style>
+</head>
+<body>  
+    <div class="reactangle"></div>
+    <div class="reat"></div>
+</body>
+</html>
