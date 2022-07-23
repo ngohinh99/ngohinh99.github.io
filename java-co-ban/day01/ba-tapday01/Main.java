@@ -28,5 +28,7 @@ public class Main {
         System.out.println("x khong thuoc khoan tu 10 den 30 " + !((x>10)&&(x<30)));
         System.out.println("x co nhieu hon 4 chu so"  ) ;
         System.out.println("x co chinh xac 6 chu so");
+        
+        
     }
 }
