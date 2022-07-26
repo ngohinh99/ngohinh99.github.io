@@ -38,5 +38,6 @@ public class Baitapday02 {
         double time= khoang/3600000d;
         System.out.printf("Thoi gian chay %s h \n", time);
         System.out.printf("Van toc trung binh %s km/h\n", distant/time );
+        
     }
 }
