@@ -5,9 +5,9 @@ public class Bai2 {
         int num = 2;
         while(primeCount <= 100){
             if (num ==2){
-                primeCount= 2;
-                primeTotal = primeTotal + primeCount;
-                System.out.print(primeCount+ " + ");
+                primeCount++;
+                primeTotal = primeTotal + num;
+                System.out.print(num+ " + ");
                 num++;
                 continue;
             }
@@ -20,15 +20,12 @@ public class Bai2 {
                 }
             }
             if(isPrime == true){
-                primeCount = num;
-                if (num < 100 ){
-                    primeTotal= primeTotal + primeCount;
-                    System.out.print(primeCount+ " + ");
-                }
-                
+                primeCount ++;
+                primeTotal= primeTotal + num;
+                System.out.print(num + " + ");
             }
             num++;
         }
-        System.out.print("= "+ primeTotal);        
+        System.out.print("= "+ primeTotal);
     }
 }

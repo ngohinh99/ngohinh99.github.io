@@ -17,11 +17,11 @@ public class Bai3 {
         
         // nhập thời gian bắt đầu, gán vào biên startTimeStr
         System.out.print("Nhập thời gian bắt đầu: ");
-        startTimeStr = scanner.next();
+        startTimeStr = scanner.nextLine();
         
         // nhập thời gian kết thúc, gán vào biến finishTimeStr
         System.out.print("Nhập thời gian kết thúc: ");
-        finishTimeStr = scanner.next();
+        finishTimeStr = scanner.nextLine();
 
         scanner.close();
         DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
