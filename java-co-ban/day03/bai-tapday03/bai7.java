@@ -6,21 +6,19 @@ public class bai7 {
         System.out.println("Input seconds: ");
         int seconds= scanner.nextInt();
         scanner.close();
-        int gio= 0; 
-        int phut= 0; 
+        int hours= 0; 
+        int minute= 0; 
         while(seconds>= 60){
             if(seconds - 60 >= 0){
-                phut++;
+                minute++;
                 seconds-=60;
-                if(phut -60 >= 0){
-                    gio++;
-                    phut = phut -60;
+                if(minute -60 >= 0){
+                    hours++;
+                    minute = minute -60;
                 }
             }
             
         }
-        System.out.println(gio);
-        System.out.println(phut);
-        System.out.println(seconds);
+        System.out.printf("%s:%s:%s",hours, minute, seconds);
     }
 }
