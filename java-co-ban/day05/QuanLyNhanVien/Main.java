@@ -5,7 +5,7 @@ public class Main {
         Employee trungGian;
         for( int i= 0; i < employeeList.length -1; i++){
             for(int j= i + 1; j < employeeList.length; j++){
-                if(employeeList[i].luongThang < employeeList[j].luongThang ){
+                if(employeeList[i].getLuongThang() < employeeList[j].getLuongThang() ){
                     trungGian = employeeList[i];
                     employeeList[i] = employeeList[j];
                     employeeList[j] = trungGian;

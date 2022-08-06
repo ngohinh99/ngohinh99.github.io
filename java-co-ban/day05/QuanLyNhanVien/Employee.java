@@ -9,20 +9,53 @@ enum gioiTinh{
 public class Employee {
 
     //khai bao thuoc tinh
-    public String id;
-    public String ten;
-    public LocalDate ngaySinh;
+    private String id;
+    private String ten;
+    private LocalDate ngaySinh;
     //public LocalDate ngaySinh;
-    public gioiTinh namORnu;
-    public long luongThang;
+    private gioiTinh namORnu;
+    private long luongThang;
     //constructor
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");//formatter time
+    
     public Employee(String id, String ten, String ngaySinh, gioiTinh namORnu, long luongThang){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");//formatter time
         this.id= id;
         this.ten= ten;
         //this.ngaySinh= ngaySinh;
         this.ngaySinh= LocalDate.parse(ngaySinh, formatter);//chuyen String sang date
         this.namORnu= namORnu;
+        this.luongThang= luongThang;
+    }
+    //getter
+    public String getId(){
+        return this.id;
+    }
+    public String getTen(){
+        return this.ten;
+    }
+    public LocalDate getNgaySinh(){
+        return this.ngaySinh;
+    }
+    public gioiTinh getNamORnu(){
+        return this.namORnu;
+    }
+    public long getLuongThang(){
+        return this.luongThang;
+    }
+    //setter
+    public void setId(String id){
+        this.id= id;
+    }
+    public void setten(String ten){
+        this.ten= ten;
+    }
+    public void setNgaySinh(String ngaySinh){
+        this.ngaySinh= LocalDate.parse(ngaySinh, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+    public void setNamORnu(gioiTinh namORnu){
+        this.namORnu= namORnu;
+    }
+    public void setLuongThang(long luongThang){
         this.luongThang= luongThang;
     }
     //tim chinh xac this.id
