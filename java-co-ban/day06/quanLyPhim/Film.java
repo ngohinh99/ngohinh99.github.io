@@ -3,11 +3,17 @@
  */
 public class Film {
     //khai bao thuoc tinh
-    private String id;
-    private String title;//tieu de
-    private Category category;//the loai
-    private double raking;
+    protected String id;
+    protected String title;//tieu de
+    protected Category category;//the loai
+    protected double raking;
     //constructor
+    public Film(String id, String title, Category category, double raking){
+        this.id= id;
+        this.title= title;
+        this.category= category;
+        this.raking= raking;
+    }
     //getter
     protected String getId(){
         return this.id;
@@ -36,7 +42,7 @@ public class Film {
     }
 
     //in thong tin Film
-    protected void printFilm(){
+    protected void printthongtin(){
         System.out.printf("stt: %s\tten: %s\tthe loai: %s\traking: %s\t",getId(),getTitle(),getCategory(),getRaking());
     }
     //tim hasKeyword the title

@@ -3,10 +3,7 @@ public class Movie extends Film{
     private int time;//thoi luong
     //constructor
     public Movie(String id, String title, Category category, double raking, int time){
-        setId(id);
-        setTitle(title);
-        setCategory(category);
-        setRaking(raking);
+        super(id, title, category, raking);
         this.time= time;
     }
     //getter
@@ -14,12 +11,11 @@ public class Movie extends Film{
         return this.time;
     }
     //setter
-    protected void setTime(int time){
-        this.time= time;
-    }
+
     //in thong tin movie
-    protected void printMovie(){
-        printFilm();
+    @Override
+    protected void printthongtin(){
+        super.printthongtin();
         System.out.printf("thoi luong: %d (phut)\n",getTime());
     }
 

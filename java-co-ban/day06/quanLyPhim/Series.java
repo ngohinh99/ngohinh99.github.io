@@ -4,10 +4,7 @@ public class Series extends Film{
     private int duration;//thoi luong moi tap
     //constructor
     public Series(String id, String title, Category category, double raking, int duration, int episodes){
-        setId(id);
-        setTitle(title);
-        setCategory(category);
-        setRaking(raking);
+        super(id, title, category, raking);
         this.duration= duration;
         this.episodes= episodes;
 
@@ -27,8 +24,9 @@ public class Series extends Film{
         this.duration= duration;
     }
     //in thong tin series
-    protected void printSeries(){
-        printFilm();
+    @Override
+    protected void printthongtin(){
+        super.printthongtin();
         System.out.printf("thoi luong: %d(phut)\ttap: %d\n", getDuration(),getEpisodes());
     }
 
