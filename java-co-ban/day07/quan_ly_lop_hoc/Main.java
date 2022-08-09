@@ -4,29 +4,31 @@ import java.util.Scanner;
  * Main
  */
 public class Main {
-    //mang tang dan theo ten
+    static void ngatCau(){
+        System.out.println("---------------------------------------");
+    }
+    //mang tang dan theo name
     static void tangdan(User[] userlist){
-        User trungGian;
+        User temp;
         for(int i= 0; i < userlist.length -1;i++){
             for(int j= i +1; j < userlist.length; j++){
-
-                if(userlist[i].getName().compareTo(userlist[j].getName()) > 0){
-                    trungGian= userlist[i];
+                if(userlist[i].getLastName().compareTo(userlist[j].getLastName()) > 0){
+                    temp= userlist[i];
                     userlist[i]= userlist[j];
-                    userlist[j]= trungGian;
+                    userlist[j]= temp;
                 }
             }
         }
     }
     //mang giam dan theo tuoi
     static void giamdan(User[] userlist){
-        User trungGian;
+        User temp;
         for(int i= 0; i < userlist.length -1;i++){
             for(int j= i +1; j < userlist.length; j++){
                 if(userlist[i].year() < userlist[j].year()){
-                    trungGian= userlist[i];
+                    temp= userlist[i];
                     userlist[i]= userlist[j];
-                    userlist[j]= trungGian;
+                    userlist[j]= temp;
                 }
             }
         }
@@ -47,6 +49,7 @@ public class Main {
         for(User user: userlist){
             user.printInfo();
         }
+        ngatCau();
         //tim kiem theo keyword
         Scanner scanner= new Scanner(System.in);
         System.out.print("nhap tu khoa de tim kiem: ");
@@ -65,18 +68,20 @@ public class Main {
                 user.printInfo();
             }
         }
-        scanner.close();
+        ngatCau();
         //sap xep mang tang dan theo ten
         tangdan(userlist);
         System.out.println("mang sap xep tang dan the name");
         for(User user: userlist){
             user.printInfo();
         }
+        ngatCau();
         //sap xep mang giam dan theo tuoi
         giamdan(userlist);
         System.out.println("mang sap xep giam dan the tuoi");
         for(User user: userlist){
             user.printInfo();
         }
+        scanner.close();
     }
 }

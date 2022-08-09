@@ -20,6 +20,16 @@ public class User {
     protected String getName(){
         return this.name;
     }
+    //lay ten trong name
+    protected String getLastName(){
+        String[] array= name.split(" ");
+        if(array[array.length-1]==" "){
+            return array[array.length-2];
+        } else {
+            return array[array.length-1];
+        }
+
+    }
     protected void printInfo(){
         System.out.printf("%s\t%s\t%s\t%s\t%s\t%s\t", this.id, this.name, this.gender, this.birthday, this.email, this.phoneNumber);
     }
