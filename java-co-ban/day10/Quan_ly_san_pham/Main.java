@@ -88,14 +88,15 @@ public class Main {
     private static void removeId() {
         System.out.print("hay nhap id ban muon xoa: ");
         String id = scanner.nextLine();
-        int temp = 0;
-        for(Product product: products){
-            temp++;
-            if(product.checkID(id)){
-                products.remove(temp - 1);
-                break;
-            }
-        }
+        // int temp = 0;
+        // for(Product product: products){
+        //     temp++;
+        //     if(product.checkID(id)){
+        //         products.remove(temp - 1);
+        //         break;
+        //     }
+        // }
+        products.removeIf(e -> e.checkID(id));
     }
     private static void checkName() {
         System.out.print("nhap ten sang pham ban muon tim: ");

@@ -46,17 +46,18 @@ public class Main {
     private static void remove(ArrayList<Student> students) {
         System.out.println("nhap id hoac ten can xoa: ");
         String keyword = scanner.nextLine();
-        int temp = 0;
-        for(Student student: students){
-            temp++;
-            if(student.checkId(keyword)){//kiem tra this.id co giong keyword 
-                students.remove(temp-1);
-                break;
-            } else if (student.checkName(keyword)){//kiem tra this.name co giong keyword 
-                students.remove(temp-1);
-                break;
-            }
-        }
+        // int temp = 0;
+        // for(Student student: students){
+        //     temp++;
+        //     if(student.checkId(keyword)){//kiem tra this.id co giong keyword 
+        //         students.remove(temp-1);
+        //         break;
+        //     } else if (student.checkName(keyword)){//kiem tra this.name co giong keyword 
+        //         students.remove(temp-1);
+        //         break;
+        //     }
+        // }
+        students.removeIf(e -> e.checkId(keyword)||e.checkName(keyword));
     }
     public static void main(String[] args) {
 
