@@ -16,7 +16,7 @@ public class Login {
                     System.out.print("nhap username: ");
                     String username = scanner.nextLine();
                     for(User us : Main.users){
-                        if(Main.checkUsernameInUsers(username)){
+                        if(us.checkName(username)){
                             isUsername = true;
                             user = us;
                         }
