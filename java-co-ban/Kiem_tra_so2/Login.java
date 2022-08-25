@@ -175,6 +175,7 @@ public class Login {
     }
 
     private static void menu() {
+        System.out.println("chao mung "+ user.getUsername());
         System.out.println("1 - thay doi username");
         System.out.println("2 - thay doi email");
         System.out.println("3 - thay doi mat khau");

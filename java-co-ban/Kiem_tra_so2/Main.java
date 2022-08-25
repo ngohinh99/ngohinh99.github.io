@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  */
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static boolean isQuit = false;
+    static boolean isQuit = false;//true thi thoat khoi truong trinh
     public static boolean Password(String password){
         String PASSWPRD = "^(?=.*[A-Z])(?=.*[@#$%^&+=]).{7,15}$";
         boolean result = Pattern.matches(PASSWPRD, password);
